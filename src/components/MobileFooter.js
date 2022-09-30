@@ -15,6 +15,7 @@ export default function MobileFooter() {
       setBrowser("Mobile");
     }
   }, []);
+  
 
   return (
     <div className="flex items-center mt-5 justify-center max-w-[520px] w-full  h-12 font-bold gap-5 bg-white rounded-md sha-[0px 35px 50px -15px rgba(194, 195, 214, 0.5)]">
