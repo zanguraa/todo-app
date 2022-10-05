@@ -11,14 +11,6 @@
 }
 
 body {
-  background: #F2F2F2;
-  background-image: url(./images/bg-mobile-light.jpg);
-  background-size: 100% 35%;
-  background-repeat: no-repeat;
-  padding: 48px 24px;
-  height: 100vh;
-  width: 100%;
-  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -27,9 +19,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  height: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#light {
+  background-image: url(./images/bg-mobile-light.jpg);
+  background-size: 100% 206px;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+
+#dark {
+  background-image: url(./images/bg-mobile-dark.jpg);
+  background-color: #171823;
+  background-size: 100% 206px;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  width: 100%;
+  background-color: #171823;
+
 }
 
 .checkbox {
@@ -40,11 +56,73 @@ code {
   width: 20px;
   height: 20px;
   display: flex;
+  cursor: pointer;
+}
+
+#dark .input-text {
+  background: #25273D;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #C8CBE7;
+  cursor: pointer;
+}
+
+#dark .enter-text {
+  color: #C8CBE7;
+  background-color: #25273D;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  outline: none !important;
+  cursor: pointer;
+}
+
+#dark .checkbox {
+  background-color: #25273D;
+}
+
+#dark .checkbox:checked {
+  background: no-repeat center url("./images/icon-check.svg"), linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+  color: #25273D;
+  cursor: pointer;
+}
+
+#dark .todo-text {
+  background-color: #25273D;
+  cursor: pointer;
+  border-bottom: 1px solid #393A4B;
+}
+
+#dark .mobile-footer {
+  background-color: #25273D;
+}
+
+#dark .item-count {
+  background-color: #25273D;
+}
+
+#dark .todo-dark-text {
+  color: #C8CBE7;
+}
+
+#dark .input-checkbox:checked ~ p {
+  text-decoration: line-through;
+  color: #4D5067;
+  
 }
 
 .input-checkbox:checked ~ p {
   text-decoration: line-through;
   color: #D1D2DA;
+  cursor: pointer;
 }
 
 .input-checkbox:checked ~ .checkbox {
@@ -52,15 +130,36 @@ code {
 
 }
 
+.mobile-footer > p:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+#dark .mobile-footer > p:hover {
+  color: white;
+}
+
+
+
 @media  screen and (min-width:500px){
 
-  body {
+  #light {
+    
     background-image: url(./images/bg-desktop-light.jpg);
-    background-size: 100% 35%;
-  background-repeat: no-repeat;
-  padding: 48px 24px;
-  height: 100vh;
-  width: 100%;
+    background-size: 100% 206px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: #F2F2F2;
   }
+
+  #dark {
+    background-image: url(./images/bg-desktop-dark.jpg);
+    background-size: 100% 206px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: #171823;
+  }
+
+  
   
 }

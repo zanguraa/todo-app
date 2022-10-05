@@ -9,8 +9,10 @@ export default function TodoContainer(props) {
     });
   }, []);
 
+  console.log(props.todos.length)
+
   return (
-    <div className="mt-4 max-w-[520px] w-full">
+    <div className="todo-container mt-4 max-w-[520px] w-full">
       {props.todos.map((todo) => {
         return (
           <Todo

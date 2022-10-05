@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import InputCheckbox from "./InputCheckbox";
 import axios from "axios";
 
+
 export default function InputText(props) {
   const [text, setText] = useState("");
 
@@ -27,10 +28,10 @@ export default function InputText(props) {
   };
 
   return (
-    <div className="flex gap-2 bg-white p-2 max-w-[520px] w-full min-w[327px] h-12  rounded">
+    <div className="input-text flex gap-2 bg-white p-2 max-w-[520px] w-full min-w[327px] h-12 items-center rounded">
       <InputCheckbox />
       <input
-        className="w-full"
+        className="enter-text w-full cursor-pointer	"
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={enterHandler}
