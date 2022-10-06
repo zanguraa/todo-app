@@ -2,23 +2,25 @@ import React, { useState } from "react";
 import InputCheckbox from "./InputCheckbox";
 import axios from "axios";
 
-
 export default function InputText(props) {
   const [text, setText] = useState("");
 
   const enterHandler = (e) => {
     if (e.key === "Enter") {
       axios
-        .post("//localhost:4001/", {
-          headers: {
-            accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: {
+        .post(
+          "//localhost:4001/",
+          {
             text: e.target.value,
-            status: "true",
+            status: "false",
           },
-        })
+          {
+            headers: {
+              accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        )
 
         .then((response) => {
           props.setTodos(response.data.rows);

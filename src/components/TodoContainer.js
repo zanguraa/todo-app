@@ -9,17 +9,19 @@ export default function TodoContainer(props) {
     });
   }, []);
 
-  console.log(props.todos.length)
+  
 
   return (
     <div className="todo-container mt-4 max-w-[520px] w-full">
       {props.todos.map((todo) => {
+       
         return (
           <Todo
             todo={todo}
             todos={props.todos}
             setTodos={props.setTodos}
             key={todo.id}
+            status={todo.status}
           />
         );
       })}

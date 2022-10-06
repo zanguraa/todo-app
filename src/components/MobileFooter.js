@@ -1,4 +1,12 @@
+
+
+
 export default function MobileFooter(props) {
+
+  
+
+
+
   return (
     <div className="w-full max-w-[520px]">
       <div className="mobile-footer flex items-center mt-5 md:hidden justify-center max-w-[520px] w-full  h-12 font-bold gap-5 bg-white rounded-md sha-[0px 35px 50px -15px rgba(194, 195, 214, 0.5)]">
