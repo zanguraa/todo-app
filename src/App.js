@@ -20,15 +20,16 @@ function App() {
         className="h-full  justify-center flex flex-col items-center py-12 px-6 w-full min-w[327px]"
         id={theme}
       >
-        <Navbar theme={theme} setTheme={setTheme} />
-        <InputText todos={todos} setTodos={setTodos} />
-        <div className="w-full max-w-[520px]">
-          <TodoContainer todos={todos} setTodos={setTodos} />
-          <ItemCount todos={todos} />
-  
-        </div>
+        <div className=" max-w-[520px] w-full mb-[500px] ml-6 mr-6 mt-12">
+          <Navbar theme={theme} setTheme={setTheme} />
+          <InputText todos={todos} setTodos={setTodos} />
+          <div className="w-full max-w-[520px]">
+            <TodoContainer todos={todos} setTodos={setTodos} />
+            <ItemCount todos={todos} />
+          </div>
 
-        <MobileFooter todos={todos} />
+          <MobileFooter todos={todos} setTodos={setTodos} />
+        </div>
       </div>
     </ThemeContext.Provider>
   );

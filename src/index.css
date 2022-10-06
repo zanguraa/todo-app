@@ -44,7 +44,7 @@ code {
   background-repeat: no-repeat;
   flex-shrink: 0;
   width: 100%;
-  background-color: #171823;
+  /* background-color: #171823; */
 
 }
 
@@ -72,7 +72,16 @@ code {
   cursor: pointer;
 }
 
+.enter-text {
+  outline: none;
+}
+
+#dark body {
+  background-color: #171823;
+}
+
 #dark .enter-text {
+  outline: none;
   color: #C8CBE7;
   background-color: #25273D;
   font-family: 'Josefin Sans';
